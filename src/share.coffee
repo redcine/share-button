@@ -68,15 +68,19 @@ $.fn.share = (opts) ->
 
     set_opt = (base,ext) -> if opts[base] then opts[base][ext] || config[ext] else config[ext]
 
-    config.twitter_url  = set_opt('twitter', 'url')
-    config.twitter_text = set_opt('twitter', 'text')
-    config.fb_url       = set_opt('facebook', 'url')
-    config.fb_title     = set_opt('facebook', 'title')
-    config.fb_caption   = set_opt('facebook', 'caption')
-    config.fb_text      = set_opt('facebook', 'text')
-    config.fb_image     = set_opt('facebook', 'image')
-    config.gplus_url    = set_opt('gplus', 'url')
-
+    config.twitter_url     = set_opt('twitter', 'url')
+    config.twitter_text    = set_opt('twitter', 'text')
+    config.fb_url          = set_opt('facebook', 'url')
+    config.fb_title        = set_opt('facebook', 'title')
+    config.fb_caption      = set_opt('facebook', 'caption')
+    config.fb_text         = set_opt('facebook', 'text')
+    config.fb_image        = set_opt('facebook', 'image')
+    config.gplus_url       = set_opt('gplus', 'url')
+    config.pinterest_url   = set_opt('pinterest', 'url')
+    config.pinterest_image = set_opt('pinterest', 'image')
+    config.pinterest_text  = set_opt('pinterest', 'text')
+    config.mail_url        = set_opt('mail', 'url')
+    config.mail_text       = set_opt('mail', 'text')
 
     #############
     ## PRIVATE ##
@@ -129,7 +133,7 @@ $.fn.share = (opts) ->
     # Inject HTML #
     ###############
 
-    $(@).html("<label class='entypo-#{config.button_icon}'><span>#{config.button_text}</span></label><div class='social #{config.flyout}'><ul><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li></ul></div>")
+    $(@).html("<label class='entypo-#{config.button_icon}'><span>#{config.button_text}</span></label><div class='social #{config.flyout}'><ul><li class='entypo-pinterest' data-network='pinterest'></li><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li><li class='entypo-mail' data-network='mail'></li></ul></div>")
 
 
     #######################
@@ -147,6 +151,8 @@ $.fn.share = (opts) ->
       twitter: "http://twitter.com/intent/tweet?text=#{config.twitter_text}&url=#{config.twitter_url}"
       facebook: "https://www.facebook.com/sharer/sharer.php?u=#{config.fb_url}"
       gplus: "https://plus.google.com/share?url=#{config.gplus_url}"
+      pinterest: "https://www.pinterest.com/pin/create/button/?url=#{config.pinterest_url}&media=#{config.pinterest_image}&description=#{config.pinterest_text}"
+      mail: "mailto:?subject=#{config.mail_text}&body=#{config.mail_url}"
 
     ##############################
     # Popup/Share Links & Events #
@@ -165,28 +171,33 @@ $.fn.share = (opts) ->
     close = -> bubble.removeClass('active')
 
     click_link = ->
-      link = paths[$(@).data('network')]
-      if ($(@).data('network') == 'facebook') && config.app_id
-        unless window.FB
-          console.log "The Facebook JS SDK hasn't loaded yet."
-          return
+      network = $(@).data('network')
+      link = paths[network]
 
-        window.FB.ui
-          method: 'feed',
-          name: config.fb_title
-          link: config.fb_url
-          picture: config.fb_image
-          caption: config.fb_caption
-          description: config.fb_text
-      else
-        popup = 
-          width: 500
-          height: 350
+      switch
+        when (network == 'facebook') && config.app_id
+          unless window.FB
+            console.log "The Facebook JS SDK hasn't loaded yet."
+            return
 
-        popup.top = (screen.height/2) - (popup.height/2)
-        popup.left = (screen.width/2) - (popup.width/2)
+          window.FB.ui
+            method: 'feed',
+            name: config.fb_title
+            link: config.fb_url
+            picture: config.fb_image
+            caption: config.fb_caption
+            description: config.fb_text
+        when network == 'mail'
+          window.location = link
+        else
+          popup = 
+            width: 500
+            height: 350
 
-        window.open(link, 'targetWindow', "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,left=#{popup.left},top=#{popup.top},width=#{popup.width},height=#{popup.height}")
+          popup.top = (screen.height/2) - (popup.height/2)
+          popup.left = (screen.width/2) - (popup.width/2)
+
+          window.open(link, 'targetWindow', "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,left=#{popup.left},top=#{popup.top},width=#{popup.width},height=#{popup.height}")
       return false
 
     $sharer.find('label').on 'click', toggle
