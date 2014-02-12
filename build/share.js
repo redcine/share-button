@@ -1,4 +1,4 @@
-!function(){function getStyles(config){ return "<style>"+config.selector+"{width:90px;height:20px}"+config.selector+" [class*=entypo-]:before{font-family:entypo,sans-serif}"+config.selector+" label{font-size:16px;cursor:pointer;margin:0;padding:5px 10px;border-radius:5px;background:"+config.button_background+";color:"+config.button_color+";-webkit-transition:all .3s ease;transition:all .3s ease}"+config.selector+" label:hover{opacity:.8}"+config.selector+" label span{text-transform:uppercase;font-size:.85em;font-family:Lato,sans-serif;font-weight:900;-webkit-font-smoothing:antialiased;padding-left:6px}"+config.selector+" .social{-webkit-transform-origin:50% 0;-ms-transform-origin:50% 0;transform-origin:50% 0;-webkit-transform:scale(0) translateY(-190px);-ms-transform:scale(0) translateY(-190px);transform:scale(0) translateY(-190px);opacity:0;-webkit-transition:all .4s ease;transition:all .4s ease;margin-left:-15px}"+config.selector+" .social.active{opacity:1;-webkit-transition:all .4s ease;transition:all .4s ease}"+config.selector+" .social.active.center{margin-left:-105px}"+config.selector+" .social.active.left{margin-left:-225px}"+config.selector+" .social.active.right{margin-left:10px}"+config.selector+" .social.active.top{-webkit-transform:scale(1) translateY(-90px);-ms-transform:scale(1) translateY(-90px);transform:scale(1) translateY(-90px)}"+config.selector+" .social.active.top.center ul:after{margin:35px auto;border-top:20px solid #3b5998}"+config.selector+" .social.active.top.left ul:after{margin:35px 0 0 249px;border-top:20px solid #738a8d}"+config.selector+" .social.active.top.right ul:after{margin:35px 0 0 10px;border-top:20px solid #e3262e}"+config.selector+" .social.active.bottom{-webkit-transform:scale(1) translateY(45px);-ms-transform:scale(1) translateY(45px);transform:scale(1) translateY(45px);margin-top:-14px}"+config.selector+" .social.active.bottom.center ul:after{margin:-10px auto;border-bottom:20px solid #3b5998}"+config.selector+" .social.active.bottom.left ul:after{margin:-10px 0 0 249px;border-bottom:20px solid #738a8d}"+config.selector+" .social.active.bottom.right ul:after{margin:-10px 0 0 10px;border-bottom:20px solid #e3262e}"+config.selector+" .social ul{position:relative;left:0;right:0;width:300px;height:46px;color:#fff;background:#3b5998;margin:auto;padding:0;list-style:none}"+config.selector+" .social ul li{font-size:20px;cursor:pointer;width:60px;margin:0;padding:12px 0;text-align:center;float:left;display:block;height:22px;position:relative;z-index:2;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-transition:all .3s ease;transition:all .3s ease}"+config.selector+" .social ul li:hover{color:rgba(0,0,0,.5)}"+config.selector+" .social ul:after{content:'';display:block;width:0;height:0;position:absolute;left:0;right:0;border-left:20px solid transparent;border-right:20px solid transparent}"+config.selector+" .social li[class*=twitter]{background:#6cdfea;padding:12px 0}"+config.selector+" .social li[class*=gplus]{background:#e34429;padding:12px 0}"+config.selector+" .social li[class*=pinterest]{background:#e3262e;padding:12px 0}"+config.selector+" .social li[class*=mail]{background:#738a8d;padding:12px 0}</style>"};var $;
+!function(){function getStyles(config){ return "<style>"+config.selector+"{width:90px;height:20px}"+config.selector+" [class*=entypo-]:before{font-family:entypo,sans-serif}"+config.selector+" label{font-size:16px;cursor:pointer;margin:0;padding:5px 10px;border-radius:5px;background:"+config.button_background+";color:"+config.button_color+";-webkit-transition:all .3s ease;transition:all .3s ease}"+config.selector+" label:hover{opacity:.8}"+config.selector+" label span{text-transform:uppercase;font-size:.85em;font-family:Lato,sans-serif;font-weight:900;-webkit-font-smoothing:antialiased;padding-left:6px}"+config.selector+" .social{-webkit-transform-origin:50% 0;-ms-transform-origin:50% 0;transform-origin:50% 0;-webkit-transform:scale(0) translateY(-190px);-ms-transform:scale(0) translateY(-190px);transform:scale(0) translateY(-190px);opacity:0;-webkit-transition:all .4s ease;transition:all .4s ease;margin-left:-15px}"+config.selector+" .social.active{opacity:1;-webkit-transition:all .4s ease;transition:all .4s ease}"+config.selector+" .social.active.center{margin-left:-105px}"+config.selector+" .social.active.left{margin-left:-225px}"+config.selector+" .social.active.right{margin-left:10px}"+config.selector+" .social.active.top{-webkit-transform:scale(1) translateY(-90px);-ms-transform:scale(1) translateY(-90px);transform:scale(1) translateY(-90px)}"+config.selector+" .social.active.top.center ul:after{margin:35px auto;border-top:20px solid #415b92}"+config.selector+" .social.active.top.left ul:after{margin:35px 0 0 249px;border-top:20px solid #738a8d}"+config.selector+" .social.active.top.right ul:after{margin:35px 0 0 10px;border-top:20px solid #e3262e}"+config.selector+" .social.active.bottom{-webkit-transform:scale(1) translateY(45px);-ms-transform:scale(1) translateY(45px);transform:scale(1) translateY(45px);margin-top:-14px}"+config.selector+" .social.active.bottom.center ul:after{margin:-10px auto;border-bottom:20px solid #415b92}"+config.selector+" .social.active.bottom.left ul:after{margin:-10px 0 0 249px;border-bottom:20px solid #738a8d}"+config.selector+" .social.active.bottom.right ul:after{margin:-10px 0 0 10px;border-bottom:20px solid #e3262e}"+config.selector+" .social ul{position:relative;left:0;right:0;width:300px;height:46px;color:#fff;background:#415b92;margin:auto;padding:0;list-style:none}"+config.selector+" .social ul li{font-size:20px;cursor:pointer;width:60px;margin:0;padding:12px 0;text-align:center;float:left;display:block;height:22px;position:relative;z-index:2;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-transition:all .3s ease;transition:all .3s ease}"+config.selector+" .social ul li:hover{color:rgba(0,0,0,.5)}"+config.selector+" .social ul:after{content:'';display:block;width:0;height:0;position:absolute;left:0;right:0;border-left:20px solid transparent;border-right:20px solid transparent}"+config.selector+" .social li[class*=twitter]{background:#5dc9d4;padding:12px 0}"+config.selector+" .social li[class*=gplus]{background:#d5503a;padding:12px 0}"+config.selector+" .social li[class*=pinterest]{background:#c5282f;padding:12px 0}"+config.selector+" .social li[class*=paper-plane]{background:#42c5b0;padding:12px 0}</style>"};var $;
 
 $ = jQuery;
 
@@ -11,7 +11,8 @@ $.fn.share = function(opts) {
   $head = $('head');
   $body = $('body');
   return $(this).each(function(i, el) {
-    var $sharer, bubble, bubbles, click_link, close, config, open, parent, paths, protocol, set_opt, toggle;
+    var $sharer, bubble, bubbles, click_link, close, config, open, parent, paths, set_opt, toggle,
+      _this = this;
     $sharer = $(this);
     $sharer.addClass("sharer-" + i);
     $sharer.hide();
@@ -55,7 +56,7 @@ $.fn.share = function(opts) {
       config.app_id = config.app_id.toString();
     }
     config.protocol = opts.protocol || (['http', 'https'].indexOf(window.location.href.split(':')[0]) === -1 ? 'https://' : '//');
-    if (!$('link[href="https://www.sharebutton.co/fonts/entypo.min.css"]').length) {
+    if (!$('link[href="https://www.sharebutton.co/xfonts/entypo.min.css"]').length) {
       $("<link />").attr({
         rel: "stylesheet",
         href: "https://www.sharebutton.co/fonts/entypo.min.css"
@@ -70,7 +71,7 @@ $.fn.share = function(opts) {
     if (!$("meta[name='sharer" + config.selector + "']").length) {
       $('head').append(getStyles(config)).append("<meta name='sharer" + config.selector + "'>");
     }
-    $(this).html("<label class='entypo-" + config.button_icon + "'><span>" + config.button_text + "</span></label><div class='social " + config.flyout + "'><ul><li class='entypo-pinterest' data-network='pinterest'></li><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li><li class='entypo-mail' data-network='mail'></li></ul></div>");
+    $(this).html("<label class='entypo-" + config.button_icon + "'><span>" + config.button_text + "</span></label><div class='social " + config.flyout + "'><ul><li class='entypo-pinterest' data-network='pinterest'></li><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li><li class='entypo-paper-plane' data-network='mail'></li></ul></div>");
     if (!window.FB && config.app_id && ($('#fb-root').length === 0)) {
       $body.append("<div id='fb-root'></div><script>(function(a,b,c){var d,e=a.getElementsByTagName(b)[0];a.getElementById(c)||(d=a.createElement(b),d.id=c,d.src='" + config.protocol + "connect.facebook.net/en_US/all.js#xfbml=1&appId=" + config.app_id + "',e.parentNode.insertBefore(d,e))})(document,'script','facebook-jssdk');</script>");
     }
@@ -132,11 +133,9 @@ $.fn.share = function(opts) {
     $body.on('click', function() {
       return bubbles.removeClass('active');
     });
-    setTimeout(((function(_this) {
-      return function() {
-        return $sharer.show();
-      };
-    })(this)), 250);
+    setTimeout((function() {
+      return $sharer.show();
+    }), 250);
     return {
       toggle: toggle.bind(this),
       open: open.bind(this),

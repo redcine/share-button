@@ -102,7 +102,7 @@ $.fn.share = (opts) ->
     # Notes
     # - Must be https:// due to CDN CORS caching issues
     # - To include the full entypo set, change URL to: https://www.sharebutton.co/fonts/entypo.css
-    unless $('link[href="https://www.sharebutton.co/fonts/entypo.min.css"]').length
+    unless $('link[href="https://www.sharebutton.co/xfonts/entypo.min.css"]').length
       $("<link />").attr(
         rel: "stylesheet"
         href: "https://www.sharebutton.co/fonts/entypo.min.css" # 
@@ -133,7 +133,7 @@ $.fn.share = (opts) ->
     # Inject HTML #
     ###############
 
-    $(@).html("<label class='entypo-#{config.button_icon}'><span>#{config.button_text}</span></label><div class='social #{config.flyout}'><ul><li class='entypo-pinterest' data-network='pinterest'></li><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li><li class='entypo-mail' data-network='mail'></li></ul></div>")
+    $(@).html("<label class='entypo-#{config.button_icon}'><span>#{config.button_text}</span></label><div class='social #{config.flyout}'><ul><li class='entypo-pinterest' data-network='pinterest'></li><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li><li class='entypo-paper-plane' data-network='mail'></li></ul></div>")
 
 
     #######################
