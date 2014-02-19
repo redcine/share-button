@@ -2,38 +2,60 @@
 // dep: http://fonts.googleapis.com/css?family=Lato:900
 
 { selector }
-  size: 90px 20px
+  // size: 90px 20px
+  // margin-bottom: 30px
+  width: 90px
+  height: 20px
+  position: relative
 
-  [class*='entypo-']:before
-    font-family: 'entypo', sans-serif;
+  // [class*='entypo-']:before
+  //   font-family: 'entypo', sans-serif;
 
   label
-    font-size: 16px
+    // font-size: 14px
     cursor: pointer
     margin: 0
-    padding: 5px 10px
-    border-radius: 5px
-    background: unquote(button_background)
-    color: unquote(button_color)
-    transition()
+    padding: 3px 9px
+    border-radius: 3px
+    // background: unquote(button_background)
+    background: #aaa
+    background: linear-gradient(top, #aaa 0%, #666 100%)
+    // color: unquote(button_color)
+    color: #222
+    // transition()
+    box-shadow: rgba(0,0,0,0.55) 0 1px 1px
+    -webkit-font-smoothing: antialiased
 
     &:hover
-      opacity: .8
+      // opacity: .8
+      color: #990000
+
+    i
+      font-size: 16px
 
     span
-      upcase()
-      font-size: .85em
-      font-family: Lato, sans-serif
-      font-weight: 900
-      -webkit-font-smoothing: antialiased
-      padding-left: 6px
+      // upcase()
+      // font-size: .85em
+      // font-family: Lato, sans-serif
+      // font-weight: 900
+      text-transform: uppercase
+      font-weight: bold
+      
+      padding-left: 4px
+
+  &.light
+    label
+      background: linear-gradient(top, #ddd 0%, #aaa 100%)
 
   .social
+    width: 180px
     transform-origin: 50% 0%
-    transform: scale(0) translateY(-190px)
+    transform: scale(0) translateY(-180px)
     opacity: 0
-    transition: all .4s ease
+    // transition: all .4s ease
     margin-left: -15px
+    box-shadow: rgba(0,0,0,0.55) 0 5px 25px
+    box-sizing: content-box
 
     &.active
       opacity: 1
@@ -57,19 +79,22 @@
           ul
             &:after
               margin: 35px auto
-              border-top: 20px solid #3B5998
+              // border-top: 20px solid #3B5998
+              border-top: 20px solid #ddd
 
         &.left
           ul
             &:after
               margin: 35px 0px 0px 129px
-              border-top: 20px solid #E34429
+              // border-top: 20px solid #E34429
+              border-top: 20px solid #ddd
 
         &.right
           ul
             &:after
               margin: 35px 0px 0px 10px
-              border-top: 20px solid #6CDFEA
+              // border-top: 20px solid #6CDFEA
+              border-top: 20px solid #ddd
 
       &.bottom
         transform: scale(1) translateY(45px)
@@ -79,25 +104,29 @@
           ul
             &:after
               margin: -10px auto
-              border-bottom: 20px solid #3B5998
+              // border-bottom: 20px solid #3B5998
+              border-bottom: 20px solid #ddd
 
         &.left
           ul
             &:after
               margin: -10px 0px 0px 129px
-              border-bottom: 20px solid #E34429
+              // border-bottom: 20px solid #E34429
+              border-bottom: 20px solid #ddd
 
         &.right
           ul
             &:after
               margin: -10px 0px 0px 10px
-              border-bottom: 20px solid #6CDFEA
+              // border-bottom: 20px solid #6CDFEA
+              border-bottom: 20px solid #ddd
 
     ul
       relative: left 0 right 0
       size: 180px 46px
-      color: #fff
-      background: #3B5998
+      color: #333
+      // background: #3B5998
+      background: #ddd
       margin: auto
       padding: 0
       list-style: none
@@ -115,10 +144,15 @@
         position: relative
         z-index: 2
         box-sizing: content-box
-        transition()
+        // transition()
 
         &:hover
-          color: rgba(0,0,0,.5)
+          // color: rgba(0,0,0,.5)
+          color: #990000
+
+        i
+          padding-top: 4px
+          -webkit-font-smoothing: antialiased
 
       &:after
         content: ''
@@ -129,9 +163,11 @@
         border-right: 20px solid transparent
 
     li[class*='twitter']
-      background: #6CDFEA
-      padding: 12px 0
+      // background: #6CDFEA
+      background: #e6e6e6
+      // padding: 12px 0
 
-    li[class*='gplus']
-      background: #E34429
-      padding: 12px 0
+    li[class*='google-plus']
+      // background: #E34429
+      background: #e6e6e6
+      // padding: 12px 0

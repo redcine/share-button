@@ -58,7 +58,7 @@ $.fn.share = (opts) ->
 
     config.button_color      = opts.color || '#333'
     config.button_background = opts.background || '#e1e1e1'
-    config.button_icon       = opts.icon || 'export'
+    config.button_icon       = opts.icon || 'share'
     config.button_text       = if typeof(opts.button_text) is 'string'
       opts.button_text
     else
@@ -98,22 +98,22 @@ $.fn.share = (opts) ->
     # Notes
     # - Must be https:// due to CDN CORS caching issues
     # - To include the full entypo set, change URL to: https://www.sharebutton.co/fonts/entypo.css
-    unless $('link[href="https://www.sharebutton.co/fonts/entypo.min.css"]').length
-      $("<link />").attr(
-        rel: "stylesheet"
-        href: "https://www.sharebutton.co/fonts/entypo.min.css" # 
-      ).appendTo $("head")
+    # unless $('link[href="https://www.sharebutton.co/fonts/entypo.min.css"]').length
+    #   $("<link />").attr(
+    #     rel: "stylesheet"
+    #     href: "https://www.sharebutton.co/fonts/entypo.min.css" # 
+    #   ).appendTo $("head")
 
 
     ################
     # Inject Fonts #
     ################
 
-    unless $('link[href="'+config.protocol+'fonts.googleapis.com/css?family=Lato:900"]').length
-      $("<link />").attr(
-        rel: "stylesheet"
-        href: "#{config.protocol}fonts.googleapis.com/css?family=Lato:900&text=#{config.button_text}"
-      ).appendTo $("head")
+    # unless $('link[href="'+config.protocol+'fonts.googleapis.com/css?family=Lato:900"]').length
+    #   $("<link />").attr(
+    #     rel: "stylesheet"
+    #     href: "#{config.protocol}fonts.googleapis.com/css?family=Lato:900&text=#{config.button_text}"
+    #   ).appendTo $("head")
 
 
     ##############
@@ -129,7 +129,25 @@ $.fn.share = (opts) ->
     # Inject HTML #
     ###############
 
-    $(@).html("<label class='entypo-#{config.button_icon}'><span>#{config.button_text}</span></label><div class='social #{config.flyout}'><ul><li class='entypo-twitter' data-network='twitter'></li><li class='entypo-facebook' data-network='facebook'></li><li class='entypo-gplus' data-network='gplus'></li></ul></div>")
+    $(@).html """
+      <label>
+        <i class='icon icon-share'></i>
+        <span>#{config.button_text}</span>
+      </label>
+      <div class='social #{config.flyout}'>
+        <ul>
+          <li class='twitter' data-network='twitter'>
+            <i class='icon icon-twitter icon-large'></i>
+          </li>
+          <li class='facebook' data-network='facebook'>
+            <i class='icon icon-facebook icon-large'></i>
+          </li>
+          <li class='google-plus' data-network='gplus'>
+            <i class='icon icon-google-plus icon-large'></i>
+          </li>
+        </ul>
+      </div>
+      """
 
 
     #######################
