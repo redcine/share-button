@@ -131,19 +131,19 @@ $.fn.share = (opts) ->
 
     $(@).html """
       <label>
-        <i class='icon icon-share'></i>
+        <i class='fa fa-share'></i>
         <span>#{config.button_text}</span>
       </label>
       <div class='social #{config.flyout}'>
         <ul>
           <li class='twitter' data-network='twitter'>
-            <i class='icon icon-twitter icon-large'></i>
+            <i class='fa fa-twitter fa-lg'></i>
           </li>
           <li class='facebook' data-network='facebook'>
-            <i class='icon icon-facebook icon-large'></i>
+            <i class='fa fa-facebook fa-lg'></i>
           </li>
           <li class='google-plus' data-network='gplus'>
-            <i class='icon icon-google-plus icon-large'></i>
+            <i class='fa fa-google-plus fa-lg'></i>
           </li>
         </ul>
       </div>
